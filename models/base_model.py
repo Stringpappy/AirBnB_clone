@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """implementation of the class base model"""
 import uuid
-import datetime
+from datetime import datetime
+
 
 
 class BaseModel:
@@ -14,8 +15,13 @@ class BaseModel:
         self.updated_at = datetime.now()
 
     def __str__(self):
+<<<<<<< HEAD
         return "[{}] ({}) {}\
                 ".format(self.__class__.__name__,  self.id, self.__dict__)
+=======
+        return "[{}] ({}) {}".format(self.__class__.__name__, self.id,
+                                     self.__dict__)
+>>>>>>> c50db0987b293791bd6180b4b52be8332e04d625
 
     def save(self):
         self.updated_at = datetime.now()
