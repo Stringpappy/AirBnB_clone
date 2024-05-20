@@ -3,6 +3,7 @@
 import uuid
 import datetime
 
+
 class BaseModel:
     """super class"""
 
@@ -13,14 +14,15 @@ class BaseModel:
         self.updated_at = datetime.now()
 
     def __str__(self):
-        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
-    
+        return "[{}] ({}) {}\
+                ".format(self.__class__.__name__,  self.id, self.__dict__)
+
     def save(self):
         self.updated_at = datetime.now()
-    
+
     def to_dict(self):
         stuff_in_dict = self.__dict__.copy()
-        stuff_in_dict ['__class__'] = self.__class__.__name__
-        stuff_in_dict ['created_at'] = self.created_at.isoformat()
-        stuff_in_dict ['updated_at'] = self.updated_at.isoformat()
-        return stuff_in_dict 
+        stuff_in_dict['__class__'] = self.__class__.__name__
+        stuff_in_dict['created_at'] = self.created_at.isoformat()
+        stuff_in_dict['updated_at'] = self.updated_at.isoformat()
+        return stuff_in_dict
