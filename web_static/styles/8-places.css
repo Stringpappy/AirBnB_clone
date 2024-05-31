@@ -1,0 +1,38 @@
+
+
+.max_guest{
+    width: 100%;
+    background-image: url(images/icon1.png);
+    background-size: cover;
+    margin-right: 20px;
+    
+}
+.number_rooms{
+    width: 100%;
+    background-image: url(images/icon_bath.png);
+    background-size: cover;
+   
+
+}
+.number_bathrooms{
+    width: 100%;
+    background-image: url(images/icon_bed\ \(2\).png);
+
+    background-size: cover;
+    
+
+}
+.user{
+    margin-top: 30px;
+    text-align: left;
+}
+.description{
+    margin-top: 15px;
+    text-align: left;
+}
+.fh2{
+        margin-top: 0px;
+        margin-bottom: 30px;
+        margin-left: 70px;
+        font-size:30px
+}
