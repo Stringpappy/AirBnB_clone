@@ -1,0 +1,10 @@
+
+header{
+    background-color: #FF0000; 
+    height: 70px; 
+    width: 100%;
+     /* num 3 */
+     color: white;
+     border-bottom: 1px #CCCCCC;
+     /*insert logo on left and center vertically(20px space at left) */
+}

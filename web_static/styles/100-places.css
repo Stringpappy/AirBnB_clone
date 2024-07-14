@@ -1,0 +1,30 @@
+.amenities{
+    align-items: left; 
+    margin-top: 40px; 
+    font-size: 16px; 
+    border-bottom: 1px solid #DDDDDD;
+}
+.amenities ul{
+    list-style: none;
+
+}
+
+.amenities ul li{
+    height: 50px;
+    width: 50px;
+    margin: 0;
+}
+.amenities .a{
+    background-image: url(images/icon_tv.png);
+
+
+}
+.amenities .b{
+    background-image: url(images/icon_wifi.png);
+
+
+}
+.amenities .c{
+    background-image: url(images/icon_pets.png);
+
+}
