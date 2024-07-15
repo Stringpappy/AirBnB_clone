@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""The progtamme thar Defines the HBNB console."""
+"""
+The progtamme thar Defines the HBNB console.
+"""
 import cmd
 from shlex import split
 from models import storage
