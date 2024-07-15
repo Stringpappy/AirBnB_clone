@@ -43,14 +43,13 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def do_create(self, line):
-        """The func that Create a new class instance 
+        """The func that Create a new class instance
         with given keys/values and print its id.
         """
         try:
             if not line:
                 raise SyntaxError()
         listmi = line.split(" ")
-
             kwargs = {}
             for itr in range(1, len(listmi)):
                 key, value = tuple(listmi[itr].split("="))
@@ -252,4 +251,4 @@ class HBNBCommand(cmd.Cmd):
 
 
 if __name__ == '__main__':
-    HBNBCommand().cmdloop()   
+    HBNBCommand().cmdloop()
