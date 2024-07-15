@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
-The progtamme thar Defines the HBNB console.
+
+The progtamme that Defines the HBNB console.
+
 """
 import cmd
 from shlex import split
@@ -50,17 +52,17 @@ class HBNBCommand(cmd.Cmd):
             if not line:
                 raise SyntaxError()
         listmi = line.split(" ")
-            kwargs = {}
-            for itr in range(1, len(listmi)):
-                key, value = tuple(listmi[itr].split("="))
-                if value[0] == '"':
-                    value = value.strip('"').replace("_", " ")
-                else:
-                    try:
-                        value = eval(value)
+        kwargs = {}
+        for itr in range(1, len(listmi)):
+            key, value = tuple(listmi[itr].split("="))
+            if value[0] == '"':
+                value = value.strip('"').replace("_", " ")
+            else:
+                try:
+                    value = eval(value)
                     except (SyntaxError, NameError):
                         continue
-                kwargs[key] = value
+                    kwargs[key] = value
 
             if kwargs == {}:
                 myobj = eval(listmi[0])()
@@ -187,7 +189,8 @@ class HBNBCommand(cmd.Cmd):
             print("** value missing **")
 
     def count(self, line):
-        """func that count the number of instances of a class
+        """
+        func that count the number of instances of a class
         """
         ctr = 0
         try:
