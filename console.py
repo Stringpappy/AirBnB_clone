@@ -44,39 +44,6 @@ class HBNBCommand(cmd.Cmd):
         print("")
         return True
 
-    def do_create(self, line):
-        """The func that Create a new class instance
-        with given keys/values and print its id.
-        """
-        try:
-            if not line:
-                raise SyntaxError()
-        listmi = line.split(" ")
-        kwargs = {}
-        for itr in range(1, len(listmi)):
-            key, value = tuple(listmi[itr].split("="))
-            if value[0] == '"':
-                value = value.strip('"').replace("_", " ")
-            else:
-                try:
-                    value = eval(value)
-                    except (SyntaxError, NameError):
-                        continue
-                    kwargs[key] = value
-
-            if kwargs == {}:
-                myobj = eval(listmi[0])()
-            else:
-                myobj = eval(listmi[0])(**kwargs)
-                storage.new(myobj)
-            print(myobj.id)
-            myobj.save()
-
-        except SyntaxError:
-            print("** class name missing **")
-        except NameError:
-            print("** class doesn't exist **")
-
     def do_show(self, line):
         """
         The func that Prints the string representation of an instance
