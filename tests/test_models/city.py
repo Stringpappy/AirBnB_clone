@@ -4,6 +4,7 @@ import unittest
 from models.city import City
 import pep8
 
+
 class City_testing(unittest.TestCase):
     """ Test BaseModel """
 

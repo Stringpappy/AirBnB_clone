@@ -4,6 +4,7 @@ import unittest
 from models.amenity import Amenity
 import pep8
 
+
 class Amenity_testing(unittest.TestCase):
     """func that test BaseModel """
 
