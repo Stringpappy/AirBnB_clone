@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import json
-"""recreate a BaseModel from another one by using a dictionary representation:"""
+"""recreate a BaseModel from another one by using a dictionary rep"""
 
 
 class FileStorage:
@@ -29,11 +29,11 @@ class FileStorage:
         """Deserialization"""
         try:
             with open(self.__file_path, 'r') as f:
-                serialized_objs = json.load(f)
-                for key, obj_dict in serialized_objs.items():
-                    class_name, obj_id = key.split('.')
-                    module = __import__('models.' + class_name, fromlist=[class_name])
-                    cls = getattr(module, class_name)
+                obj_to_serialized = json.load(f)
+                for key, obj_dict in obj_to_serialized.items():
+                    cls_name, obj_id = key.split('.')
+                    m = __import__('models.' + cls_name, fromlist=[cls_name])
+                    cls = getattr(m, cls_name)
                     obj = cls(**obj_dict)
                     self.__objects[key] = obj
         except FileNotFoundError:
